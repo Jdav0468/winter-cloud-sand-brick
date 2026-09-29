@@ -69,10 +69,10 @@ function Hero() {
         </div>
         <figure className="md:col-span-6">
           <img
-            src="/media/highway.png"
-            alt="A white tractor and dry van in a sunset yard, with a flatbed and van behind it"
-            width={1672}
-            height={941}
+            src="/media/highway.jpg"
+            alt="A black tractor pulling a tarped flatbed on a highway at sunset"
+            width={1792}
+            height={1008}
             className="aspect-hero w-full object-cover"
           />
           <figcaption className="mt-3 flex items-center justify-between text-xs font-medium uppercase tracking-widest text-muted">
