@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Play } from "lucide-react";
 import { LoadBrief } from "@/components/load-brief";
 import { SiteShell } from "@/components/site-shell";
-import { COMPANY, MOVES, PRINCIPLES, REGIONS, STEPS } from "@/lib/content";
+import { COMPANY, MOVES, PRINCIPLES, REGIONS, STEPS, VIDEOS } from "@/lib/content";
 import { cn } from "@/lib/cn";
 
 export const Route = createFileRoute("/")({
@@ -29,6 +29,7 @@ function Home() {
       <Moves />
       <Process />
       <Coverage />
+      <Videos />
       <Close />
     </SiteShell>
   );
@@ -262,6 +263,48 @@ function Coverage() {
         <div className="mt-10">
           <LoadBrief />
         </div>
+      </div>
+    </section>
+  );
+}
+
+function Videos() {
+  return (
+    <section id="videos" className="border-b border-line scroll-mt-20">
+      <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
+        <p className="text-xs font-semibold uppercase tracking-widest text-muted">YouTube</p>
+        <h2 className="mt-3 font-display text-4xl text-ink">Ro-Mac on film.</h2>
+        <p className="mt-4 max-w-xl text-base leading-relaxed text-muted">
+          Commercials and clips from the desk. They play here.
+        </p>
+        {VIDEOS.length > 0 ? (
+          <ul className="mt-10 grid gap-8 lg:grid-cols-2">
+            {VIDEOS.map((video) => (
+              <li key={video.id}>
+                <div className="aspect-video w-full overflow-hidden border border-line bg-ink">
+                  <iframe
+                    src={`https://www.youtube-nocookie.com/embed/${video.id}`}
+                    title={video.title}
+                    className="h-full w-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                  />
+                </div>
+                <p className="mt-3 font-display text-2xl text-ink">{video.title}</p>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <div className="mt-10 flex aspect-video w-full flex-col items-center justify-center gap-3 border border-line bg-ink text-cream">
+            <Play className="size-8 text-copper" aria-hidden="true" />
+            <p className="font-display text-3xl">YouTube videos go here.</p>
+            <p className="max-w-md px-6 text-center text-sm leading-6 text-cream/70">
+              Send the links and they will play in this spot.
+            </p>
+          </div>
+        )}
       </div>
     </section>
   );

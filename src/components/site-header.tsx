@@ -37,6 +37,12 @@ export function SiteHeader() {
             </Link>
           ))}
           <a
+            href="/#videos"
+            className="font-display text-base tracking-widest text-muted transition-colors duration-200 hover:text-ink"
+          >
+            Videos
+          </a>
+          <a
             href={COMPANY.news.href}
             target="_blank"
             rel="noreferrer"
@@ -79,6 +85,15 @@ export function SiteHeader() {
                 </Link>
               </li>
             ))}
+            <li>
+              <a
+                href="/#videos"
+                className="flex min-h-11 items-center text-base font-medium text-ink"
+                onClick={() => setOpen(false)}
+              >
+                Videos
+              </a>
+            </li>
             <li>
               <a
                 href={COMPANY.news.href}

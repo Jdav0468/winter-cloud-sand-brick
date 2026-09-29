@@ -15,6 +15,9 @@ export const COMPANY = {
   },
 } as const;
 
+/** YouTube watch IDs only, from the part after v= or youtu.be/ */
+export const VIDEOS: { id: string; title: string }[] = [];
+
 export const EQUIPMENT = [
   { id: "flatbed", label: "Flatbed" },
   { id: "hotshot", label: "40' flatbed hotshot" },
