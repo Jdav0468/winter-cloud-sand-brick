@@ -31,7 +31,7 @@ function ServicesPage() {
         <div className="mx-auto grid max-w-6xl gap-6 px-5 py-16 sm:grid-cols-2 md:px-8 md:py-20 lg:grid-cols-3">
           {MOVES.map((move) => (
             <figure key={move.title} className="border border-line bg-paper">
-              <img src={move.image} alt={move.alt} className="aspect-photo w-full object-cover" />
+              <img src={move.image} alt={move.alt} className="aspect-[9/16] w-full object-cover" />
               <figcaption className="px-4 py-3 text-sm font-semibold text-ink">{move.title}</figcaption>
             </figure>
           ))}

@@ -170,7 +170,7 @@ function Moves() {
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {MOVES.map((move) => (
             <article key={move.title} className="border border-line bg-paper">
-              <img src={move.image} alt={move.alt} className="aspect-photo w-full object-cover" />
+              <img src={move.image} alt={move.alt} className="aspect-[9/16] w-full object-cover" />
               <div className="p-6">
                 <p className="text-xs font-semibold uppercase tracking-widest text-muted">{move.kicker}</p>
                 <h3 className="mt-2 font-display text-3xl">{move.title}</h3>
