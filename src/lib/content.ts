@@ -13,10 +13,19 @@ export const COMPANY = {
     label: "Daily Logistics News",
     href: "https://zephyr-zinc-plum-clover.grok.me",
   },
+  youtube: "https://www.youtube.com/@Ro-Maclogistics",
 } as const;
 
-/** YouTube watch IDs only, from the part after v= or youtu.be/ */
-export const VIDEOS: { id: string; title: string }[] = [];
+export const VIDEOS: { id: string; title: string }[] = [
+  { id: "2PAerRkoaEk", title: "RM Chad Commercial" },
+  { id: "60hmK_gbb-8", title: "Ro Mac At Risk" },
+  { id: "dAi5uUEiKf4", title: "Ro Mac Logistics Commercial" },
+  { id: "th6oow7dWVQ", title: "Ro Mac Partnership" },
+  { id: "Pa2nnZcwUNs", title: "September 24, 2026" },
+  { id: "EX3GRzF-u0k", title: "September 24, 2026" },
+  { id: "CiYOV3HfzLs", title: "September 24, 2026" },
+  { id: "mvCmFzfdQJM", title: "September 24, 2026" },
+];
 
 export const EQUIPMENT = [
   { id: "flatbed", label: "Flatbed" },

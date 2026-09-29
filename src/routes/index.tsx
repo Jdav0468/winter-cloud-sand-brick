@@ -275,7 +275,16 @@ function Videos() {
         <p className="text-xs font-semibold uppercase tracking-widest text-muted">YouTube</p>
         <h2 className="mt-3 font-display text-4xl text-ink">Ro-Mac on film.</h2>
         <p className="mt-4 max-w-xl text-base leading-relaxed text-muted">
-          Commercials and clips from the desk. They play here.
+          Commercials and clips from the desk.{" "}
+          <a
+            href={COMPANY.youtube}
+            target="_blank"
+            rel="noreferrer"
+            className="font-semibold text-ink underline decoration-copper underline-offset-4"
+          >
+            Watch the channel
+          </a>
+          .
         </p>
         {VIDEOS.length > 0 ? (
           <ul className="mt-10 grid gap-8 lg:grid-cols-2">
