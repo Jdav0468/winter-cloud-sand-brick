@@ -36,12 +36,15 @@ export function SiteHeader() {
               {link.label}
             </Link>
           ))}
-          <a
-            href="/#videos"
-            className="font-display text-base tracking-widest text-muted transition-colors duration-200 hover:text-ink"
+          <Link
+            to="/videos"
+            className={cn(
+              "font-display text-base tracking-widest transition-colors duration-200",
+              path === "/videos" ? "text-pine" : "text-muted hover:text-ink",
+            )}
           >
             Videos
-          </a>
+          </Link>
           <a
             href={COMPANY.news.href}
             target="_blank"
@@ -86,13 +89,13 @@ export function SiteHeader() {
               </li>
             ))}
             <li>
-              <a
-                href="/#videos"
+              <Link
+                to="/videos"
                 className="flex min-h-11 items-center text-base font-medium text-ink"
                 onClick={() => setOpen(false)}
               >
                 Videos
-              </a>
+              </Link>
             </li>
             <li>
               <a

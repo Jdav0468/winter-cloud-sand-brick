@@ -56,9 +56,9 @@ export function SiteFooter() {
             >
               Request a truck
             </Link>
-            <a href="/#videos" className="underline decoration-copper underline-offset-4">
+            <Link to="/videos" className="underline decoration-copper underline-offset-4">
               Videos
-            </a>
+            </Link>
             <a
               href={COMPANY.news.href}
               target="_blank"

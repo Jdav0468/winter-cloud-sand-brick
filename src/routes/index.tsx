@@ -4,6 +4,7 @@ import { ArrowRight, Play } from "lucide-react";
 import { LoadBrief } from "@/components/load-brief";
 import { SiteShell } from "@/components/site-shell";
 import { COMPANY, MOVES, PRINCIPLES, REGIONS, STEPS, VIDEOS } from "@/lib/content";
+import { SpotPlayer } from "@/components/spot-player";
 import { cn } from "@/lib/cn";
 
 export const Route = createFileRoute("/")({
@@ -272,20 +273,18 @@ function Videos() {
   return (
     <section id="videos" className="border-b border-line scroll-mt-20">
       <div className="mx-auto max-w-6xl px-5 py-16 md:px-8 md:py-24">
-        <p className="text-xs font-semibold uppercase tracking-widest text-muted">YouTube</p>
-        <h2 className="mt-3 font-display text-4xl text-ink">Ro-Mac on film.</h2>
+        <p className="text-xs font-semibold uppercase tracking-widest text-muted">October</p>
+        <h2 className="mt-3 font-display text-4xl text-ink">Don't look away.</h2>
         <p className="mt-4 max-w-xl text-base leading-relaxed text-muted">
-          Commercials and clips from the desk.{" "}
-          <a
-            href={COMPANY.youtube}
-            target="_blank"
-            rel="noreferrer"
-            className="font-semibold text-ink underline decoration-copper underline-offset-4"
-          >
-            Watch the channel
+          The nights get longer. Something is riding with the freight. The rest of the reel is on{" "}
+          <a href="/videos" className="font-semibold text-ink underline decoration-copper underline-offset-4">
+            the film page
           </a>
           .
         </p>
+        <div className="mt-8">
+          <SpotPlayer />
+        </div>
         {VIDEOS.length > 0 ? (
           <ul className="mt-10 grid gap-8 lg:grid-cols-2">
             {VIDEOS.map((video) => (
